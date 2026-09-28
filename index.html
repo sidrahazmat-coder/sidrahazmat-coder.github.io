@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sidrah Azmat: equity research, financial modelling and valuation across energy, commodities and capital markets. Dubai, UAE.">
+<title>Sidrah Azmat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+:root{
+  --bg:#f4f5f1; --surface:#ffffff; --band:#e9ece5; --ink:#14211f; --ink-2:#3d4a46; --muted:#66726e; --line:#d6dbd3;
+  --accent:#0e6b5c; --accent-ink:#ffffff; --sun:#e5a01a; --sun-soft:#fbecc8;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#4a3aa7;
+  --good:#1b7f3b; --warn:#b3261e;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Figtree", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0f1514; --surface:#161e1c; --band:#1b2422; --ink:#eef2ee; --ink-2:#c5cec9; --muted:#95a39e; --line:#2b3633;
+    --accent:#4fc3a8; --accent-ink:#0b1413; --sun:#f2b53a; --sun-soft:#3a2f14;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9;
+    --good:#5cc57a; --warn:#ff8a80;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0f1514; --surface:#161e1c; --band:#1b2422; --ink:#eef2ee; --ink-2:#c5cec9; --muted:#95a39e; --line:#2b3633;
+  --accent:#4fc3a8; --accent-ink:#0b1413; --sun:#f2b53a; --sun-soft:#3a2f14;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9;
+  --good:#5cc57a; --warn:#ff8a80;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body);margin:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;letter-spacing:-.015em}
+h2{font-size:clamp(28px,3.4vw,40px);font-weight:700;line-height:1.1}
+h3{font-size:20px;font-weight:700;line-height:1.25}
+p{margin:0}
+.eyebrow{font:600 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* nav */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font:800 18px/1 var(--display);text-decoration:none;letter-spacing:-.02em}
+.brand span{color:var(--sun)}
+.nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px;font-weight:500}
+.nav ul a{text-decoration:none;color:var(--ink-2)}
+.nav ul a:hover{color:var(--accent)}
+@media (max-width:640px){.nav ul{display:none}}
+
+/* buttons */
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font:600 15px/1 var(--body);text-decoration:none;border:1px solid var(--ink);cursor:pointer;background:transparent;color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{transform:translateY(-1px)}
+@media (prefers-reduced-motion:reduce){.btn:hover{transform:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,64px);align-items:center;padding-block:clamp(40px,7vw,88px)}
+.portrait{position:relative;aspect-ratio:4/4.4;max-width:100%;border-radius:20px;background:var(--ink);color:var(--bg);overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;padding:26px}
+.portrait .mono{font:800 clamp(96px,14vw,168px)/.85 var(--display);letter-spacing:-.05em}
+.portrait .mono span{color:var(--sun)}
+.portrait .sunpath{position:absolute;inset:auto -20% -48% -20%;height:90%;border-radius:50%;border:1px dashed color-mix(in srgb,var(--bg) 30%,transparent)}
+.portrait .sundot{position:absolute;width:22px;height:22px;border-radius:50%;background:var(--sun);right:18%;top:34%;box-shadow:0 0 0 8px color-mix(in srgb,var(--sun) 25%,transparent)}
+.portrait dl{position:relative;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0;font:400 13px/1.4 var(--mono)}
+.portrait dt{opacity:.6}
+.portrait dd{margin:0}
+.hero h1{font-size:clamp(36px,5.2vw,62px);font-weight:800;line-height:1.02}
+.hero h1 mark{background:var(--sun-soft);color:inherit;padding:0 .12em;border-radius:6px}
+.hero .lede{font-size:18px;color:var(--ink-2);max-width:56ch;margin-block:22px 28px}
+@media (max-width:820px){.hero{grid-template-columns:1fr}.portrait{aspect-ratio:auto;min-height:280px;max-width:420px}}
+
+/* sections */
+section.block{padding-block:clamp(56px,8vw,96px)}
+section.tint{background:var(--band)}
+.sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:36px;max-width:68ch}
+.sec-head p{color:var(--ink-2)}
+
+/* experience cards */
+.roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.role{border-top:2px solid var(--ink);padding-top:18px;display:flex;flex-direction:column;gap:14px}
+.role .org{font-weight:600}
+.role .meta{font:400 12px/1.4 var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.stats{display:flex;gap:28px}
+.stat .k{font:600 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.stat .v{font:700 26px/1.2 var(--display);margin-top:6px}
+.role p{color:var(--ink-2);font-size:15px}
+.role ul{margin:0;padding-left:18px;font-size:15px;color:var(--ink-2);display:flex;flex-direction:column;gap:4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:500 12px/1 var(--body);padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--ink-2);background:var(--surface)}
+@media (max-width:900px){.roles{grid-template-columns:1fr}}
+
+/* model */
+.model-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:32px}
+.model-top p{color:var(--ink-2)}
+@media (max-width:820px){.model-top{grid-template-columns:1fr}}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:28px}
+.kpi{background:var(--surface);padding:18px 18px 16px}
+.kpi .k{font:600 11px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.kpi .v{font:700 30px/1.1 var(--display);margin-top:8px;font-variant-numeric:tabular-nums}
+.kpi .s{font-size:13px;color:var(--muted);margin-top:4px}
+.kpi.hi .v{color:var(--accent)}
+@media (max-width:760px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.panel h3{font-size:17px}
+.panel .sub{font-size:14px;color:var(--muted);margin-top:4px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:14px;font-size:13px;color:var(--ink-2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.legend i.line{height:2px;border-radius:0;vertical-align:3px;width:14px}
+.legend i.dash{height:0;border-top:2px dashed var(--muted);border-radius:0;vertical-align:3px;width:14px;background:none!important}
+.chartbox{position:relative;height:320px;margin-top:10px}
+.grid2{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:20px;margin-top:20px}
+@media (max-width:900px){.grid2{grid-template-columns:1fr}}
+
+.stress{display:flex;flex-direction:column;gap:18px}
+.slider label{display:flex;justify-content:space-between;font-size:14px;font-weight:500}
+.slider output{font:600 14px var(--mono)}
+.slider input{width:100%;accent-color:var(--accent);margin-top:8px}
+.results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.res{border:1px solid var(--line);border-radius:10px;padding:12px}
+.res .k{font:600 10px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.res .v{font:700 22px/1.2 var(--display);margin-top:6px;font-variant-numeric:tabular-nums}
+.res .d{font:400 12px var(--mono);margin-top:2px;color:var(--muted)}
+.res .d.up{color:var(--good)} .res .d.down{color:var(--warn)}
+.pill{display:inline-flex;align-items:center;gap:6px;font:600 12px/1 var(--body);padding:6px 10px;border-radius:999px;border:1px solid var(--line)}
+.pill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--good)}
+.pill.bad::before{background:var(--warn)}
+.note{font-size:12.5px;color:var(--muted);line-height:1.5}
+.linkbtn{background:none;border:0;padding:0;font:600 13px var(--body);color:var(--accent);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:20px}
+.flow span{font:500 13px/1 var(--mono);padding:9px 12px;border-radius:8px;background:var(--surface);border:1px solid var(--line)}
+.flow b{color:var(--muted);font-weight:400}
+.terms{width:100%;border-collapse:collapse;font-size:14px}
+.terms td{padding:9px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.terms td:last-child{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;padding-left:12px}
+.terms tr:last-child td{border-bottom:0}
+.tbl-wrap{overflow-x:auto;margin-top:14px}
+.data{border-collapse:collapse;font:400 12.5px var(--mono);font-variant-numeric:tabular-nums;min-width:640px;width:100%}
+.data th,.data td{padding:6px 8px;text-align:right;border-bottom:1px solid var(--line)}
+.data th{color:var(--muted);font-weight:600}
+.data td:first-child,.data th:first-child{text-align:left}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.proj .tag{font:600 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.proj p{font-size:14.5px;color:var(--ink-2)}
+.proj a.more{margin-top:auto;font-weight:600;font-size:14px;color:var(--accent);text-underline-offset:3px}
+@media (max-width:900px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.projects{grid-template-columns:1fr}}
+
+/* testimonials */
+.quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.quote{border-left:3px solid var(--sun);padding:4px 0 4px 20px;display:flex;flex-direction:column;gap:14px}
+.quote blockquote{margin:0;font:500 19px/1.45 var(--display);letter-spacing:-.005em}
+.quote .who{font-weight:600}
+.quote .role2{font-size:14px;color:var(--muted)}
+@media (max-width:760px){.quotes{grid-template-columns:1fr}}
+
+/* creds */
+.creds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.cred .k{font:600 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.cred p{font-size:15px}
+.cred p+p{margin-top:6px}
+.cred small{color:var(--muted);font-size:13px}
+@media (max-width:900px){.creds{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.creds{grid-template-columns:1fr}}
+
+/* cta */
+.cta{background:var(--ink);color:var(--bg);border-radius:24px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:28px;align-items:center}
+.cta h2{color:var(--bg)}
+.cta p{opacity:.8;margin-top:12px}
+.cta .btn{border-color:var(--bg);color:var(--bg)}
+.cta .btn.primary{background:var(--sun);border-color:var(--sun);color:#1a1405}
+.contact{display:flex;flex-direction:column;gap:10px;font:400 15px var(--mono)}
+.copied{font:500 13px var(--body);color:var(--sun);min-height:18px}
+@media (max-width:760px){.cta{grid-template-columns:1fr}}
+footer{padding-block:32px;font-size:13px;color:var(--muted)}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="#top">Sidrah Azmat<span>.</span></a>
+    <ul>
+      <li><a href="#work">Experience</a></li>
+      <li><a href="#solar">Solar model</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="portrait" aria-hidden="true">
+      <div class="sunpath"></div><div class="sundot"></div>
+      <div class="mono">S<span>A</span></div>
+      <dl>
+        <dt>Base</dt><dd>Dubai, UAE</dd>
+        <dt>Coverage</dt><dd>IPPs · E&amp;P · Refining · OMCs · Utilities</dd>
+        <dt>Markets</dt><dd>Pakistan · GCC</dd>
+      </dl>
+    </div>
+    <div>
+      <p class="eyebrow">Equity research · Financial modelling · Energy &amp; commodities</p>
+      <h1 style="margin-top:14px">Hi, I’m <mark>Sidrah</mark>. I build the models behind energy and capital-allocation decisions.</h1>
+      <p class="lede">7+ years valuing IPPs, refineries, E&amp;Ps and utilities across Pakistan and the GCC. I turn project finance, commodity balances and company filings into investment theses that committees can act on.</p>
+      <div class="btns">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn" href="#solar">See the solar model</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="block tint" id="work">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Experience</p><h2>What I’ve done</h2></div>
+      <div class="roles">
+        <article class="role">
+          <h3>Ran part of an institutional equity portfolio and beat the brief</h3>
+          <div><div class="org">PakOman Investment Company</div><div class="meta">Assistant Fund Manager · 2016–2018</div></div>
+          <div class="stats">
+            <div class="stat"><div class="k">Portfolio subset</div><div class="v num">PKR 300mn</div></div>
+            <div class="stat"><div class="k">Return 2017–18</div><div class="v num">+32%</div></div>
+          </div>
+          <p>Presented stock ideas to the Capital Markets Review Committee and led portfolio prioritisation against value, risk and strategic fit.</p>
+          <ul><li>Won board approval for new positions outside the existing book</li><li>Mentored IBA teams for the CFA Research Challenge ’18</li></ul>
+        </article>
+        <article class="role">
+          <h3>Led energy and power coverage for institutional clients</h3>
+          <div><div class="org">Next Capital Limited</div><div class="meta">Senior Research Analyst · 2018–2019</div></div>
+          <div class="stats">
+            <div class="stat"><div class="k">Sectors covered</div><div class="v num">4</div></div>
+            <div class="stat"><div class="k">Team</div><div class="v num">3 + 2</div></div>
+          </div>
+          <p>Bottom-up DCF and comparables models for E&amp;Ps, OMCs, refineries and IPPs, plus the house macro outlook (CPI, BoP, GDP).</p>
+          <div class="chips"><span class="chip">E&amp;P</span><span class="chip">OMCs</span><span class="chip">Refineries</span><span class="chip">IPPs</span><span class="chip">Macro</span></div>
+        </article>
+        <article class="role">
+          <h3>Independent research for private clients across the GCC</h3>
+          <div><div class="org">Independent Research Consultant</div><div class="meta">Feb 2025 – present</div></div>
+          <div class="stats">
+            <div class="stat"><div class="k">Focus</div><div class="v">Oil · Trade · Health</div></div>
+          </div>
+          <p>Reserve-based global oil outlook, UAE non-oil trade across CEPA partners, and market-structure work on Abu Dhabi healthcare.</p>
+          <ul><li>Co-authored research with the Universities of Edinburgh and Glasgow</li><li>Earlier: IPO due diligence for Kot Addu Power at Shajar Capital</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="solar">
+    <div class="wrap">
+      <div class="model-top">
+        <div class="sec-head" style="margin:0"><p class="eyebrow">Featured model</p><h2>600 MW solar IPP: tariff and project-finance model</h2></div>
+        <p>A full project-finance model built to support a tariff petition and the investment decision. Capex, drawdowns, O&amp;M, financing, tax and depreciation feed an integrated three-statement output, a tariff build-up, the debt schedule, equity IRR and coverage ratios.</p>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi"><div class="k">Project cost</div><div class="v">PKR 105.7bn</div><div class="s">≈ USD 423M at PKR 250/USD</div></div>
+        <div class="kpi hi"><div class="k">Levelised tariff</div><div class="v">4.35¢<span style="font-size:16px"> /kWh</span></div><div class="s">PKR 10.87/kWh over 25 years</div></div>
+        <div class="kpi hi"><div class="k">Equity IRR</div><div class="v" id="kpiIrr">13.8%</div><div class="s">Payback in 7.1 years</div></div>
+        <div class="kpi"><div class="k">Min DSCR</div><div class="v" id="kpiDscr">1.27x</div><div class="s">Lowest year of the 14-year loan</div></div>
+      </div>
+
+      <div class="panel">
+        <h3>Tariff build-up by component, PKR per kWh</h3>
+        <p class="sub">Debt service makes up about two-thirds of the tariff until the loan is repaid in year 14, and the tariff then falls from about PKR 12.4 to PKR 4.0.</p>
+        <div class="legend" id="tariffLegend"></div>
+        <div class="chartbox"><canvas id="tariffChart" role="img" aria-label="Stacked bar chart of tariff components by operating year"></canvas></div>
+        <button class="linkbtn" id="toggleTable" aria-expanded="false" aria-controls="tariffTable">Show the numbers</button>
+        <div class="tbl-wrap" id="tariffTable" hidden></div>
+      </div>
+
+      <div class="grid2">
+        <div class="panel">
+          <h3>Cumulative equity cash flow, PKR bn</h3>
+          <p class="sub">Sponsors put in PKR 20.2bn at financial close and get it back in year 8.</p>
+          <div class="legend"><span><i class="line" style="background:var(--accent)"></i>Scenario</span><span><i class="dash"></i>Model base case</span></div>
+          <div class="chartbox" style="height:280px"><canvas id="fcfeChart" role="img" aria-label="Line chart of cumulative free cash flow to equity"></canvas></div>
+        </div>
+        <div class="panel stress">
+          <div><h3>Stress test the base case</h3><p class="sub">Move generation or O&amp;M cost and the equity returns update. The tariff stays fixed, as it would under a signed PPA.</p></div>
+          <div class="slider">
+            <label for="gen">Generation vs P50 <output id="genOut" class="num">0%</output></label>
+            <input id="gen" type="range" min="-15" max="15" step="1" value="0">
+          </div>
+          <div class="slider">
+            <label for="om">Local O&amp;M cost <output id="omOut" class="num">0%</output></label>
+            <input id="om" type="range" min="-20" max="50" step="5" value="0">
+          </div>
+          <div class="results">
+            <div class="res"><div class="k">Equity IRR</div><div class="v" id="rIrr">13.8%</div><div class="d" id="dIrr">base</div></div>
+            <div class="res"><div class="k">Payback</div><div class="v" id="rPay">7.1 yrs</div><div class="d" id="dPay">base</div></div>
+            <div class="res"><div class="k">Min DSCR</div><div class="v" id="rDscr">1.27x</div><div class="d" id="dDscr">base</div></div>
+          </div>
+          <div><span class="pill" id="covenant">Coverage clears a 1.20x lender covenant</span></div>
+          <p class="note">These figures are recalculated in your browser from the model’s annual equity cash flows, revenue and debt service. They give a first-order read of each shock and are not a full rerun of the workbook. The 1.20x threshold is shown for illustration.</p>
+        </div>
+      </div>
+
+      <div class="grid2" style="grid-template-columns:minmax(0,1fr) minmax(0,1fr)">
+        <div class="panel">
+          <h3>Key terms</h3>
+          <table class="terms">
+            <tr><td>Capacity · capacity factor</td><td>600 MW · 22%</td></tr>
+            <tr><td>Annual generation · degradation</td><td>1,156 GWh · 0.5%/yr</td></tr>
+            <tr><td>Debt : equity</td><td>80 : 20</td></tr>
+            <tr><td>Senior debt</td><td>PKR 84.2bn</td></tr>
+            <tr><td>Pricing</td><td>6M LIBOR 3.02% + 4.25%</td></tr>
+            <tr><td>Tenor</td><td>1 yr grace + 14 yrs, 28 semi-annual</td></tr>
+            <tr><td>Return on equity in tariff</td><td>13%</td></tr>
+            <tr><td>Construction · operating life</td><td>12 months · 25 years</td></tr>
+          </table>
+        </div>
+        <div class="panel">
+          <h3>How the model fits together</h3>
+          <p class="sub">Eleven linked sheets, each feeding the next.</p>
+          <div class="flow">
+            <span>Assumptions</span><b>→</b><span>Capex</span><b>→</b><span>Drawdowns</span><b>→</b><span>Financing</span><b>→</b><span>Opex</span><b>→</b><span>Tariff</span><b>→</b><span>Financials (P&amp;L, BS, CF)</span><b>→</b><span>KFIs &amp; IRR</span><b>→</b><span>Sensitivities</span>
+          </div>
+          <p class="note" style="margin-top:18px">Includes interest during construction, arrangement, commitment and LC fees, an asset-replacement schedule, cash-reserve requirements, lender conditions precedent, and a KIBOR/LIBOR switch for the base rate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint" id="projects">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Selected work</p><h2>More models and research</h2></div>
+      <div class="projects">
+        <article class="proj"><span class="tag">Valuation · UAE</span><h3>NMDC Group re-rating</h3><p>Values the NMDC–NPCC and ADNOC L&amp;S–ZMI consolidations and models re-rating potential against peer EV/EBITDA multiples.</p></article>
+        <article class="proj"><span class="tag">Comparative · GCC</span><h3>ADNOC Drilling vs ADNOC Gas vs Aramco</h3><p>EBITDA margins and capital discipline across three energy majors, and how Tadawul/ADX flows now price quality compounders.</p></article>
+        <article class="proj"><span class="tag">Equity story · UAE</span><h3>EMSTEEL model and thesis</h3><p>Financial model and re-rating case tied to the UAE mega-project pipeline and the carbon-cost edge of its DRI-EAF route.</p></article>
+        <article class="proj"><span class="tag">Commodities</span><h3>Global crude balances</h3><p>Scenario model on EIA, JODI, OPEC and IEA data that maps OECD inventory gaps to Brent bands and splits fundamentals from risk premium.</p></article>
+        <article class="proj"><span class="tag">Metals</span><h3>Copper supply adequacy</h3><p>Institutional report and monitor built on mine output, recycling, refining and project pipelines against electrification demand.</p></article>
+        <article class="proj"><span class="tag">Live dashboard</span><h3>Steel market intelligence terminal</h3><p>Python and JavaScript tool covering 6 products and 7 regions, with an automated pipeline and live Google Sheets feed.</p><a class="more" href="https://sidrahazmat-coder.github.io/SidrahAKhan-SteelDashboard/" target="_blank" rel="noopener">Open the dashboard ↗</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tint">
+    <div class="wrap creds">
+      <div class="cred"><div class="k">Education</div><p>MS Strategic Operations Management, IBA Karachi <small>· CGPA 3.62, highest in cohort</small></p><p>BBA Finance &amp; HR, IBA Karachi</p></div>
+      <div class="cred"><div class="k">Publications</div><p>First author, <em>Modern Supply Chain Research and Applications</em> (Emerald), accepted</p><p>Second author, <em>International Business Review</em>, revise &amp; resubmit</p></div>
+      <div class="cred"><div class="k">Credentials</div><p>CFA Level I candidate, May 2027</p><p>ESG Fundamentals for Financial Decision-Making, CFI</p></div>
+      <div class="cred"><div class="k">Tools &amp; languages</div><p>Excel, Python, R, SPSS, Bloomberg, Refinitiv</p><p>English, Urdu, Arabic (A2), French (A2)</p></div>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <h2>If you’re weighing a project, a stock or a market, let’s talk.</h2>
+          <p>Based in Dubai. Open to equity research, investment and energy strategy roles, and to project work.</p>
+        </div>
+        <div class="contact">
+          <span id="email">sidrah.azmat@gmail.com</span>
+          <div class="btns">
+            <button class="btn primary" id="copyEmail" type="button">Copy email</button>
+            <a class="btn" href="https://www.linkedin.com/in/sidrah-azmat-khan-7a692a50/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+          <div class="copied" id="copied" role="status"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="wrap">© 2026 Sidrah Azmat · Figures in the solar section come from the author’s own model.</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const M = {"tariff":[[1.038,0,0.337,2.494,0.18,3.227,5.268],[1.038,0,0.337,2.494,0.18,3.342,5.006],[1.038,0,0.337,2.494,0.18,3.618,4.779],[1.038,0,0.337,2.494,0.18,3.866,4.514],[1.038,0,0.337,2.494,0.18,4.149,4.2],[1.038,0,0.337,2.494,0.18,4.484,3.908],[1.038,0,0.337,2.494,0.18,4.801,3.583],[1.038,0,0.337,2.494,0.18,5.15,3.201],[1.038,0,0.337,2.494,0.18,5.557,2.83],[1.038,0,0.337,2.494,0.18,5.959,2.428],[1.038,0,0.337,2.494,0.18,6.391,1.963],[1.038,0,0.337,2.494,0.18,6.958,1.49],[1.038,0,0.337,2.494,0.18,7.489,0.985],[1.038,0,0.337,2.494,0.18,8.034,0.449],[1.038,0,0.337,2.494,0.18,0,0],[1.038,0,0.337,2.494,0.18,0,0],[1.038,0,0.337,2.494,0.18,0,0],[1.038,0,0.337,2.494,0.18,0,0],[1.038,0,0.337,2.494,0.18,0,0],[1.038,0,0.337,2.494,0.18,0,0],[1.038,0,0.337,2.494,0.18,0,0],[1.038,0,0.337,2.494,0.18,0,0],[1.038,0,0.337,2.494,0.18,0,0],[1.038,0,0.337,2.494,0.18,0,0],[1.038,0,0.337,2.494,0.18,0,0]],"rev":[14346.5,14381.4,14357.1,14323.1,14374.9,14362.2,14324.8,14368.6,14366.0,14327.4,14362.9,14354.7,14362.6,14325.4,4662.5,4662.5,4662.5,4662.5,4662.5,4662.5,4662.5,4662.5,4662.5,4662.5,4662.5],"prin":[3595.6,3864.6,4183.9,4470.0,4797.7,5185.1,5551.9,5955.0,6425.9,6890.6,7389.5,7963.8,8547.9,9167.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"mark":[6088.4,5789.0,5526.4,5220.0,4856.9,4518.7,4142.8,3701.7,3271.8,2807.4,2270.0,1728.4,1152.2,495.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"fcfe":[-20191.2,1941.7,3133.4,3059.8,3047.3,3113.8,2820.0,2794.8,2866.4,2828.6,3044.3,3108.9,3073.5,2645.1,3077.1,4280.4,3072.5,3072.5,3072.5,3072.5,3072.5,3072.5,3072.5,3072.5,3072.5,2822.5],"lev":10.866,"levusc":4.346};
+const years = M.tariff.map((_, i) => i + 1);
+const COMP = [
+  {name:"O&M (local)", idx:0, v:"--s1"},
+  {name:"Insurance", idx:2, v:"--s2"},
+  {name:"Return on equity", idx:3, v:"--s3"},
+  {name:"ROE during construction", idx:4, v:"--s4"},
+  {name:"Principal repayment", idx:5, v:"--s5"},
+  {name:"Interest (mark-up)", idx:6, v:"--s6"}
+];
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+
+// ---- finance helpers (PKR mn) ----
+const OM_LOCAL = 1200, INS = 390;
+// asset replacement per the model's schedule, operating years 1-25 (PKR mn)
+const AR = [0,0,0,0,10,250,250,250,250,0,0,0,426.475,0,0,0,0,0,0,0,0,0,0,0,250];
+const DS = M.prin.map((p, i) => p + M.mark[i]);
+function npv(r, cf){ return cf.reduce((s, c, t) => s + c / Math.pow(1 + r, t), 0); }
+function irr(cf){ let lo = -0.9, hi = 1; for (let i = 0; i < 200; i++){ const m = (lo + hi) / 2; npv(m, cf) > 0 ? lo = m : hi = m; } return (lo + hi) / 2; }
+function scenario(g, o){
+  const cf = M.fcfe.map((c, t) => t === 0 ? c : c + M.rev[t-1] * g - OM_LOCAL * o);
+  let cum = 0, pay = null; const cumArr = [];
+  cf.forEach((c, t) => { const prev = cum; cum += c; cumArr.push(cum / 1000); if (pay === null && t > 0 && prev < 0 && cum >= 0) pay = (t - 1) + (-prev / c); });
+  let minD = Infinity;
+  for (let t = 0; t < 25; t++) if (DS[t] > 0){ const e = M.rev[t] * (1 + g) - OM_LOCAL * (1 + o) - INS - AR[t]; minD = Math.min(minD, e / DS[t]); }
+  return {irr: irr(cf), pay, minD, cumArr};
+}
+const BASE = scenario(0, 0);
+document.getElementById("kpiDscr").textContent = BASE.minD.toFixed(2) + "x";
+
+// ---- tariff legend + table ----
+document.getElementById("tariffLegend").innerHTML = COMP.map(c => `<span><i style="background:var(${c.v})"></i>${c.name}</span>`).join("");
+(function(){
+  const head = "<tr><th>Year</th>" + COMP.map(c => `<th>${c.name}</th>`).join("") + "<th>Total</th></tr>";
+  const rows = M.tariff.map((r, i) => `<tr><td>${i+1}</td>` + COMP.map(c => `<td>${r[c.idx].toFixed(2)}</td>`).join("") + `<td>${r.reduce((a,b)=>a+b,0).toFixed(2)}</td></tr>`).join("");
+  document.getElementById("tariffTable").innerHTML = `<table class="data"><thead>${head}</thead><tbody>${rows}</tbody></table>`;
+  const btn = document.getElementById("toggleTable"), tbl = document.getElementById("tariffTable");
+  btn.addEventListener("click", () => { tbl.hidden = !tbl.hidden; btn.setAttribute("aria-expanded", String(!tbl.hidden)); btn.textContent = tbl.hidden ? "Show the numbers" : "Hide the numbers"; });
+})();
+
+let tariffChart, fcfeChart, cur = BASE;
+function baseOpts(){
+  const ink2 = css("--muted"), line = css("--line");
+  return {
+    responsive:true, maintainAspectRatio:false, animation:{duration:250},
+    interaction:{mode:"index", intersect:false},
+    plugins:{legend:{display:false}, tooltip:{backgroundColor:css("--surface"), titleColor:css("--ink"), bodyColor:css("--ink-2"), borderColor:line, borderWidth:1, padding:10, bodyFont:{family:"JetBrains Mono"}, titleFont:{family:"Figtree", weight:"600"}}},
+    scales:{
+      x:{grid:{display:false}, border:{color:line}, ticks:{color:ink2, font:{family:"JetBrains Mono", size:11}}},
+      y:{grid:{color:line}, border:{display:false}, ticks:{color:ink2, font:{family:"JetBrains Mono", size:11}}}
+    }
+  };
+}
+function drawTariff(){
+  if (tariffChart) tariffChart.destroy();
+  const surf = css("--surface");
+  const o = baseOpts();
+  o.scales.x.stacked = true; o.scales.y.stacked = true;
+  o.scales.x.title = {display:true, text:"Operating year", color:css("--muted"), font:{family:"Figtree", size:12}};
+  o.plugins.tooltip.callbacks = {
+    title: it => "Year " + it[0].label,
+    label: c => ` ${c.dataset.label}: ${c.parsed.y.toFixed(2)}`,
+    footer: it => "Total: PKR " + it.reduce((s, c) => s + c.parsed.y, 0).toFixed(2) + " /kWh"
+  };
+  tariffChart = new Chart(document.getElementById("tariffChart"), {
+    type:"bar",
+    data:{labels:years, datasets:COMP.map(c => ({label:c.name, data:M.tariff.map(r => r[c.idx]), backgroundColor:css(c.v), borderColor:surf, borderWidth:{top:1, bottom:1, left:0, right:0}, borderSkipped:false, barPercentage:.78, categoryPercentage:.9}))},
+    options:o
+  });
+}
+function drawFcfe(){
+  if (fcfeChart) fcfeChart.destroy();
+  const o = baseOpts();
+  o.scales.x.title = {display:true, text:"Year from financial close", color:css("--muted"), font:{family:"Figtree", size:12}};
+  o.scales.x.ticks.maxTicksLimit = 9;
+  o.plugins.tooltip.callbacks = {title: it => "Year " + it[0].label, label: c => ` ${c.dataset.label}: PKR ${c.parsed.y.toFixed(1)}bn`};
+  fcfeChart = new Chart(document.getElementById("fcfeChart"), {
+    type:"line",
+    data:{labels:M.fcfe.map((_, i) => i), datasets:[
+      {label:"Scenario", data:cur.cumArr, borderColor:css("--accent"), backgroundColor:"transparent", borderWidth:2, pointRadius:0, pointHoverRadius:5, tension:.15},
+      {label:"Model base case", data:BASE.cumArr, borderColor:css("--muted"), borderDash:[5,4], borderWidth:1.5, pointRadius:0, pointHoverRadius:0, tension:.15}
+    ]},
+    options:o
+  });
+}
+function drawAll(){ drawTariff(); drawFcfe(); }
+
+// ---- stress test ----
+const pct = x => (x * 100).toFixed(1) + "%";
+function setDelta(el, diff, fmt, goodIfUp){
+  if (Math.abs(diff) < 1e-6){ el.textContent = "base"; el.className = "d"; return; }
+  el.textContent = (diff > 0 ? "+" : "") + fmt(diff) + " vs base";
+  el.className = "d " + ((diff > 0) === goodIfUp ? "up" : "down");
+}
+function update(){
+  const g = +document.getElementById("gen").value / 100, o = +document.getElementById("om").value / 100;
+  document.getElementById("genOut").textContent = (g > 0 ? "+" : "") + Math.round(g * 100) + "%";
+  document.getElementById("omOut").textContent = (o > 0 ? "+" : "") + Math.round(o * 100) + "%";
+  cur = scenario(g, o);
+  document.getElementById("rIrr").textContent = pct(cur.irr);
+  document.getElementById("rPay").textContent = cur.pay === null ? "n/a" : cur.pay.toFixed(1) + " yrs";
+  document.getElementById("rDscr").textContent = cur.minD.toFixed(2) + "x";
+  setDelta(document.getElementById("dIrr"), (cur.irr - BASE.irr) * 100, d => d.toFixed(1) + " pp", true);
+  setDelta(document.getElementById("dPay"), (cur.pay ?? 99) - BASE.pay, d => d.toFixed(1) + " yrs", false);
+  setDelta(document.getElementById("dDscr"), cur.minD - BASE.minD, d => d.toFixed(2) + "x", true);
+  const pill = document.getElementById("covenant"), ok = cur.minD >= 1.2;
+  pill.className = "pill" + (ok ? "" : " bad");
+  pill.textContent = ok ? "Coverage clears a 1.20x lender covenant" : "Coverage breaches a 1.20x lender covenant";
+  if (fcfeChart){ fcfeChart.data.datasets[0].data = cur.cumArr; fcfeChart.update(); }
+}
+document.getElementById("gen").addEventListener("input", update);
+document.getElementById("om").addEventListener("input", update);
+document.getElementById("rIrr").textContent = pct(BASE.irr);
+document.getElementById("kpiIrr").textContent = pct(BASE.irr);
+
+// ---- copy email ----
+document.getElementById("copyEmail").addEventListener("click", () => {
+  const msg = document.getElementById("copied"), txt = document.getElementById("email").textContent;
+  navigator.clipboard.writeText(txt).then(() => { msg.textContent = "Email copied"; }).catch(() => {
+    const r = document.createRange(); r.selectNodeContents(document.getElementById("email"));
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r); msg.textContent = "Selected. Press Ctrl+C to copy";
+  });
+});
+
+function start(){ if (!window.Chart) return; Chart.defaults.font.family = "Figtree"; drawAll(); update(); }
+document.fonts && document.fonts.ready ? document.fonts.ready.then(start) : start();
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawAll);
+new MutationObserver(drawAll).observe(document.documentElement, {attributes:true, attributeFilter:["data-theme"]});
+</script>
+</body>
+</html>
