@@ -183,6 +183,16 @@ section.tint{background:var(--band)}
 @media (max-width:900px){.creds{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:520px){.creds{grid-template-columns:1fr}}
 
+/* writing */
+.writing{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;align-items:start}
+.writing h2 em{font-style:normal;color:var(--accent)}
+.posts{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.posts li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-block:16px;border-bottom:1px solid var(--line)}
+.posts a{font:600 18px/1.35 var(--display);text-decoration:none}
+.posts a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.posts .num{font-size:12px;color:var(--muted);white-space:nowrap}
+@media (max-width:820px){.writing{grid-template-columns:1fr}}
+
 /* cta */
 .cta{background:var(--ink);color:var(--bg);border-radius:24px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:28px;align-items:center}
 .cta h2{color:var(--bg)}
@@ -205,6 +215,7 @@ footer{padding-block:32px;font-size:13px;color:var(--muted)}
       <li><a href="#solar">Solar model</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#writing">Writing</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -353,7 +364,7 @@ footer{padding-block:32px;font-size:13px;color:var(--muted)}
         <article class="proj"><span class="tag">Model · UAE</span><h3>ADNOC Gas valuation model</h3><p>Three-statement model with DCF, trading comparables and precedent transactions feeding a valuation summary and dashboard. Paired with a margin and capital-allocation comparison against ADNOC Drilling and Aramco.</p></article>
         <article class="proj"><span class="tag">Equity story · UAE</span><h3>EMSTEEL model and thesis</h3><p>Financial model and re-rating case tied to the UAE mega-project pipeline and the carbon-cost edge of its DRI-EAF route.</p></article>
         <article class="proj"><span class="tag">Model + report · Oil</span><h3>Global crude balances and Brent framework</h3><p>Scenario model covering supply, OPEC+, demand, refinery runs, inventories and EMEA flows, built on EIA, JODI, OPEC and IEA data. It maps OECD inventory gaps to Brent bands and separates fundamentals from war premium. Published as a 28-page policy brief, July 2026.</p></article>
-        <article class="proj"><span class="tag">Report · Metals</span><h3>Strategic Markets Monitor: Copper</h3><p>Issue 02, a 35-page physical-tonne framework on where the next tonne comes from. Tests mine pipelines, recycling and refining capacity against electrification demand using ICSG, USGS and IEA data.</p></article>
+        <article class="proj"><span class="tag">Report · Metals</span><h3>Strategic Markets Monitor: Copper</h3><p>Issue 02, a 35-page physical-tonne framework on where the next tonne comes from. Tests mine pipelines, recycling and refining capacity against electrification demand using ICSG, USGS and IEA data.</p><a class="more" href="reports/copper-strategic-markets-monitor-issue-02.pdf" target="_blank" rel="noopener">Read the report (PDF) ↗</a></article>
         <article class="proj"><span class="tag">Live dashboard</span><h3>Steel market intelligence terminal</h3><p>Python and JavaScript tool covering 6 products and 7 regions, with an automated pipeline and live Google Sheets feed.</p><a class="more" href="https://sidrahazmat-coder.github.io/SidrahAKhan-SteelDashboard/" target="_blank" rel="noopener">Open the dashboard ↗</a></article>
       </div>
     </div>
@@ -404,6 +415,23 @@ footer{padding-block:32px;font-size:13px;color:var(--muted)}
       <div class="cred"><div class="k">Publications</div><p>First author, <em>Modern Supply Chain Research and Applications</em> (Emerald), accepted</p><p>Second author, <em>International Business Review</em>, revise &amp; resubmit</p></div>
       <div class="cred"><div class="k">Credentials</div><p>CFA Level I candidate, May 2027</p><p>ESG Fundamentals for Financial Decision-Making, CFI</p></div>
       <div class="cred"><div class="k">Tools &amp; languages</div><p>Excel, Python, R, SPSS, Bloomberg, Refinitiv</p><p>English, Urdu, Arabic (A2), French (A2)</p></div>
+    </div>
+  </section>
+
+  <section class="block" id="writing">
+    <div class="wrap writing">
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow">When I’m not working</p>
+        <h2>I write <em>Miles and Margins</em></h2>
+        <p>A Substack of essays on travel, parenthood, reading and the in-betweens, written since 2023.</p>
+        <div class="btns" style="margin-top:8px"><a class="btn" href="https://sidrahh.substack.com/" target="_blank" rel="noopener">Read on Substack ↗</a></div>
+      </div>
+      <ul class="posts">
+          <li><a href="https://sidrahh.substack.com/p/embracing-autumn" target="_blank" rel="noopener">Embracing Autumn</a><span class="num">Sep 2026</span></li>
+          <li><a href="https://sidrahh.substack.com/p/can-a-city-be-a-soulmate" target="_blank" rel="noopener">Can a City Be a Soulmate?</a><span class="num">Dec 2025</span></li>
+          <li><a href="https://sidrahh.substack.com/p/for-the-ones-that-dont-win" target="_blank" rel="noopener">For the Ones that Don’t Win</a><span class="num">Sep 2025</span></li>
+          <li><a href="https://sidrahh.substack.com/p/on-reading-and-then-writing" target="_blank" rel="noopener">On Reading (and then Writing)</a><span class="num">Jan 2026</span></li>
+      </ul>
     </div>
   </section>
 
