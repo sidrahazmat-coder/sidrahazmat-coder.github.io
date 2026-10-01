@@ -161,6 +161,9 @@ section.tint{background:var(--band)}
 @media (max-width:900px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){.projects{grid-template-columns:1fr}}
 
+.note-card .more{margin-top:auto}
+.note-card .more + .more{margin-top:0}
+
 /* testimonials */
 .quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 32px}
 .quote{margin:0;border-left:3px solid var(--sun);padding:4px 0 4px 20px;display:flex;flex-direction:column;gap:14px}
@@ -214,6 +217,7 @@ footer{padding-block:32px;font-size:13px;color:var(--muted)}
       <li><a href="#work">Experience</a></li>
       <li><a href="#solar">Solar model</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#insights">Insights</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#writing">Writing</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -370,7 +374,22 @@ footer{padding-block:32px;font-size:13px;color:var(--muted)}
     </div>
   </section>
 
-  <section class="block" id="testimonials">
+  <section class="block" id="insights">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">From LinkedIn</p><h2>Recent insights</h2><p>Short takes I post on oil, copper, shipping, steel and GCC equities, usually built on one of the models above.</p></div>
+      <div class="projects">
+        <article class="proj note-card"><span class="tag">Oil · Sep 2026</span><h3>What Brent is pricing: a $12.78 war premium</h3><p>“$91.08 spot vs. $78.30 inventory-implied fair value, a $12.78/bbl gap that’s geopolitics, not fundamentals.”</p><a class="more" href="https://www.linkedin.com/feed/update/urn:li:activity:7510297113180897280/" target="_blank" rel="noopener">Read on LinkedIn ↗</a></article>
+        <article class="proj note-card"><span class="tag">Energy transition · Sep 2026</span><h3>The 6 TW renewables gap is a copper problem</h3><p>“Every terawatt of that gap is a claim on copper that the market hasn’t sanctioned...yet.”</p><a class="more" href="https://www.linkedin.com/feed/update/urn:li:activity:7503005502793072640/" target="_blank" rel="noopener">Read on LinkedIn ↗</a></article>
+        <article class="proj note-card"><span class="tag">Shipping · Sep 2026</span><h3>When the route changes, the fleet tightens</h3><p>“Freight is no longer a secondary landed cost adjustment. It is increasingly a source of scarcity rent.”</p><a class="more" href="https://www.linkedin.com/feed/update/urn:li:activity:7501171228209115137/" target="_blank" rel="noopener">Read on LinkedIn ↗</a><a class="more" style="margin-top:0" href="https://sidrahazmat-coder.github.io/SidrahAKhan-RedSeaRouting/" target="_blank" rel="noopener">Open the rerouting dashboard ↗</a></article>
+        <article class="proj note-card"><span class="tag">Steel · Aug 2026</span><h3>Launching the Steel Market Intelligence Terminal</h3><p>“The GCC’s gas-based DRI-EAF is the lowest route cash cost of all seven regions, pairing a margin cushion with the lowest carbon exposure.”</p><a class="more" href="https://www.linkedin.com/feed/update/urn:li:activity:7495391969460797440/" target="_blank" rel="noopener">Read on LinkedIn ↗</a></article>
+        <article class="proj note-card"><span class="tag">Equity research · Jul 2026</span><h3>NMDC is a re-rating story, not a cheap stock</h3><p>“A catch-up to 5.2x implies ~AED 33.25/share (+50%); at 6.0–6.5x, that widens to AED 38.55–41.86/share.”</p><a class="more" href="https://www.linkedin.com/feed/update/urn:li:activity:7478806890395783168/" target="_blank" rel="noopener">Read on LinkedIn ↗</a></article>
+        <article class="proj note-card"><span class="tag">Modelling · May 2026</span><h3>Model the right risk for captive drillers</h3><p>“The fastest way to misprice a drilling company is to model the wrong risk.”</p><a class="more" href="https://www.linkedin.com/feed/update/urn:li:activity:7463199206304989184/" target="_blank" rel="noopener">Read on LinkedIn ↗</a></article>
+      </div>
+      <p class="note" style="margin-top:24px"><a href="https://www.linkedin.com/in/sidrah-azmat-khan-7a692a50/recent-activity/all/" target="_blank" rel="noopener">See all posts on LinkedIn ↗</a></p>
+    </div>
+  </section>
+
+  <section class="block tint" id="testimonials">
     <div class="wrap">
       <div class="sec-head"><p class="eyebrow">Testimonials</p><h2>What they say</h2><p>Recommendations from managers and colleagues at PakOman Investment Company, posted on LinkedIn.</p></div>
       <div class="quotes">
@@ -409,7 +428,7 @@ footer{padding-block:32px;font-size:13px;color:var(--muted)}
     </div>
   </section>
 
-  <section class="block tint">
+  <section class="block">
     <div class="wrap creds">
       <div class="cred"><div class="k">Education</div><p>MS Strategic Operations Management, IBA Karachi <small>· CGPA 3.62, highest in cohort</small></p><p>BBA Finance &amp; HR, IBA Karachi</p></div>
       <div class="cred"><div class="k">Publications</div><p>First author, <em>Modern Supply Chain Research and Applications</em> (Emerald), accepted</p><p>Second author, <em>International Business Review</em>, revise &amp; resubmit</p></div>
@@ -418,7 +437,7 @@ footer{padding-block:32px;font-size:13px;color:var(--muted)}
     </div>
   </section>
 
-  <section class="block" id="writing">
+  <section class="block tint" id="writing">
     <div class="wrap writing">
       <div class="sec-head" style="margin:0">
         <p class="eyebrow">Research newsletter</p>
