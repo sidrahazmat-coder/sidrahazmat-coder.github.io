@@ -100,6 +100,17 @@ section.tint{background:var(--band)}
 .chip{font:500 12px/1 var(--body);padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--ink-2);background:var(--surface)}
 @media (max-width:900px){.roles{grid-template-columns:1fr}}
 
+.kind{font:500 11px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 7px;margin-left:6px;vertical-align:2px;white-space:nowrap}
+.earlier{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:48px}
+.earlier h3,.skills h3{font-size:18px}
+.timeline{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.timeline li{display:grid;grid-template-columns:90px minmax(0,1fr);gap:16px;padding-block:16px;border-bottom:1px solid var(--line)}
+.timeline .when{font-size:13px;color:var(--muted);padding-top:2px}
+.timeline .org{font-weight:600}
+.timeline p{font-size:15px;color:var(--ink-2);margin-top:4px}
+.skills{display:flex;flex-direction:column;gap:14px;margin-top:40px}
+@media (max-width:520px){.timeline li{grid-template-columns:1fr;gap:4px}}
+
 /* model */
 .model-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:32px}
 .model-top p{color:var(--ink-2)}
@@ -239,7 +250,7 @@ footer{padding-block:32px;font-size:13px;color:var(--muted)}
     <div>
       <p class="eyebrow">Equity research · Financial modelling · Energy &amp; commodities</p>
       <h1 style="margin-top:14px">Hi, I’m <mark>Sidrah</mark>. I build the models behind energy and capital-allocation decisions.</h1>
-      <p class="lede">7+ years valuing IPPs, refineries, E&amp;Ps and utilities across Pakistan and the GCC. I turn project finance, commodity balances and company filings into investment theses that committees can act on.</p>
+      <p class="lede">7+ years in equity research and investment analysis across energy, power, infrastructure and commodities, from sell-side coverage in Pakistan to GCC-listed companies today. I build the DCF, comparables and project-finance models behind investment theses that committees can act on.</p>
       <div class="btns">
         <a class="btn primary" href="#contact">Get in touch</a>
         <a class="btn" href="#solar">See the solar model</a>
@@ -253,7 +264,7 @@ footer{padding-block:32px;font-size:13px;color:var(--muted)}
       <div class="roles">
         <article class="role">
           <h3>Ran part of an institutional equity portfolio and beat the brief</h3>
-          <div><div class="org">PakOman Investment Company</div><div class="meta">Assistant Fund Manager · 2016–2018</div></div>
+          <div><div class="org">PakOman Investment Company <span class="kind">DFI</span></div><div class="meta">Assistant Fund Manager · 2016–2018</div></div>
           <div class="stats">
             <div class="stat"><div class="k">Portfolio subset</div><div class="v num">PKR 300mn</div></div>
             <div class="stat"><div class="k">Return 2017–18</div><div class="v num">+32%</div></div>
@@ -263,7 +274,7 @@ footer{padding-block:32px;font-size:13px;color:var(--muted)}
         </article>
         <article class="role">
           <h3>Led energy and power coverage for institutional clients</h3>
-          <div><div class="org">Next Capital Limited</div><div class="meta">Senior Research Analyst · 2018–2019</div></div>
+          <div><div class="org">Next Capital <span class="kind">Sell-side brokerage</span></div><div class="meta">Senior Research Analyst · 2018–2019</div></div>
           <div class="stats">
             <div class="stat"><div class="k">Sectors covered</div><div class="v num">4</div></div>
             <div class="stat"><div class="k">Team</div><div class="v num">3 + 2</div></div>
@@ -278,8 +289,23 @@ footer{padding-block:32px;font-size:13px;color:var(--muted)}
             <div class="stat"><div class="k">Focus</div><div class="v">Oil · Trade · Health</div></div>
           </div>
           <p>Reserve-based global oil outlook, UAE non-oil trade across CEPA partners, and market-structure work on Abu Dhabi healthcare.</p>
-          <ul><li>Co-authored research with the Universities of Edinburgh and Glasgow</li><li>Earlier: IPO due diligence for Kot Addu Power at Shajar Capital</li></ul>
+          <ul><li>Long-term oil outlook built on reserves, depletion and pricing scenarios</li><li>Co-authored research with the Universities of Edinburgh and Glasgow</li></ul>
         </article>
+      </div>
+      <div class="earlier">
+        <h3>Earlier and project roles</h3>
+        <ol class="timeline">
+          <li><span class="when num">2023–24</span><div><div class="org">Higher Education Commission (NRPU) <span class="kind">Research Associate</span></div><p>Built a country-level view of investor risk, combining governance, investment and ESG risk with macro, institutional and regulatory indicators.</p></div></li>
+          <li><span class="when num">2023</span><div><div class="org">Philip Morris Pakistan <span class="kind">Business Planning (Finance) Associate</span></div><p>Fixed-term segmentation study on demographics, price sensitivity and economy-tier demand that fed pricing, positioning and regulatory planning.</p></div></li>
+          <li><span class="when num">2014–15</span><div><div class="org">Shajar Capital <span class="kind">Equity Analyst, sell-side</span></div><p>Equity research, DCF and comps valuation on OMCs and IPPs. Supported due diligence and IPO documentation for Kot Addu Power Company and Amreli Steels.</p></div></li>
+        </ol>
+      </div>
+      <div class="skills">
+        <h3>What I bring</h3>
+        <div class="chips">
+          <span class="chip">Financial modelling &amp; valuation (DCF, comps)</span><span class="chip">Project finance</span><span class="chip">Industry &amp; market research</span><span class="chip">Sell-side &amp; consensus analysis</span><span class="chip">Commercial due diligence</span><span class="chip">Scenario &amp; sensitivity analysis</span><span class="chip">Commodity analysis</span><span class="chip">Macroeconomic research</span><span class="chip">Capital markets &amp; ADX/SCA disclosure</span><span class="chip">Investment committee support</span><span class="chip">Investor presentations</span><span class="chip">ESG &amp; decarbonisation research</span>
+        </div>
+        <p class="note" style="margin-top:12px">Tools: Excel, Bloomberg, Refinitiv, Python, R, SPSS, PowerPoint, JavaScript data visualisation</p>
       </div>
     </div>
   </section>
@@ -367,7 +393,7 @@ footer{padding-block:32px;font-size:13px;color:var(--muted)}
         <article class="proj"><span class="tag">Valuation · UAE</span><h3>NMDC Group re-rating</h3><p>Values the NMDC–NPCC and ADNOC L&amp;S–ZMI consolidations and models re-rating potential against peer EV/EBITDA multiples.</p></article>
         <article class="proj"><span class="tag">Model · UAE</span><h3>ADNOC Gas valuation model</h3><p>Three-statement model with DCF, trading comparables and precedent transactions feeding a valuation summary and dashboard. Paired with a margin and capital-allocation comparison against ADNOC Drilling and Aramco.</p></article>
         <article class="proj"><span class="tag">Equity story · UAE</span><h3>EMSTEEL model and thesis</h3><p>Financial model and re-rating case tied to the UAE mega-project pipeline and the carbon-cost edge of its DRI-EAF route.</p></article>
-        <article class="proj"><span class="tag">Model + report · Oil</span><h3>Global crude balances and Brent framework</h3><p>Scenario model covering supply, OPEC+, demand, refinery runs, inventories and EMEA flows, built on EIA, JODI, OPEC and IEA data. It maps OECD inventory gaps to Brent bands and separates fundamentals from war premium. Published as a 28-page policy brief, July 2026.</p></article>
+        <article class="proj"><span class="tag">Model + report · Oil</span><h3>Global crude balances and Brent framework</h3><p>Scenario model and live dashboard on EIA, JODI, OPEC, IEA and IMF PortWatch data, tracking balances, OECD inventory deviations, spare capacity, refining margins, Cushing stocks and chokepoint flows. An inventory-implied Brent value separates fundamentals from the geopolitical premium. Published as a 28-page policy brief, July 2026.</p><a class="more" href="https://crude-dashboard.pages.dev/frontend/" target="_blank" rel="noopener">Open the dashboard ↗</a></article>
         <article class="proj"><span class="tag">Report · Metals</span><h3>Strategic Markets Monitor: Copper</h3><p>Issue 02, a 35-page physical-tonne framework on where the next tonne comes from. Tests mine pipelines, recycling and refining capacity against electrification demand using ICSG, USGS and IEA data.</p><a class="more" href="reports/copper-strategic-markets-monitor-issue-02.pdf" target="_blank" rel="noopener">Read the report (PDF) ↗</a><a class="more" style="margin-top:0" href="https://sidrahakhan.substack.com/p/strategic-markets-monitor-issue-02" target="_blank" rel="noopener">Read on Substack ↗</a></article>
         <article class="proj"><span class="tag">Live dashboard</span><h3>Steel market intelligence terminal</h3><p>Python and JavaScript tool covering 6 products and 7 regions, with an automated pipeline and live Google Sheets feed.</p><a class="more" href="https://sidrahazmat-coder.github.io/SidrahAKhan-SteelDashboard/" target="_blank" rel="noopener">Open the dashboard ↗</a></article>
       </div>
@@ -432,7 +458,7 @@ footer{padding-block:32px;font-size:13px;color:var(--muted)}
     <div class="wrap creds">
       <div class="cred"><div class="k">Education</div><p>MS Strategic Operations Management, IBA Karachi <small>· CGPA 3.62, highest in cohort</small></p><p>BBA Finance &amp; HR, IBA Karachi</p></div>
       <div class="cred"><div class="k">Publications</div><p>First author, <em>Modern Supply Chain Research and Applications</em> (Emerald), accepted</p><p>Second author, <em>International Business Review</em>, revise &amp; resubmit</p></div>
-      <div class="cred"><div class="k">Credentials</div><p>CFA Level I candidate, May 2027</p><p>ESG Fundamentals for Financial Decision-Making, CFI</p></div>
+      <div class="cred"><div class="k">Credentials</div><p>CFA Level I candidate, May 2027</p><p>ESG Fundamentals for Financial Decision-Making, CFI</p><p>Corporate Finance: ESG, PMI and NASBA (CPE)</p></div>
       <div class="cred"><div class="k">Tools &amp; languages</div><p>Excel, Python, R, SPSS, Bloomberg, Refinitiv</p><p>English, Urdu, Arabic (A2), French (A2)</p></div>
     </div>
   </section>
