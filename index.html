@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Sidrah Azmat: equity research, financial modelling and valuation across energy, commodities and capital markets. Dubai, UAE.">
-<title>Sidrah Azmat · Portfolio</title>
+<meta name="description" content="Sidrah Azmat: valuation, project finance, commodity market analysis and market studies for energy, infrastructure and industrial sectors. Dubai, UAE.">
+<title>Sidrah Azmat · Corporate finance and commodity analysis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap">
@@ -96,6 +96,18 @@ header.top{position:fixed;inset:0 0 auto 0;z-index:20;padding-top:env(safe-area-
 section.block{padding-block:clamp(64px,9vw,110px)}
 section.tint{background:var(--band)}
 .intro{color:var(--ink-2);max-width:62ch;margin:-18px 0 40px}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.scard{background:var(--surface);border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;gap:12px}
+.scard .n{font:400 20px/1 var(--serif);color:var(--accent)}
+.scard h3{font-size:28px}
+.scard p{color:var(--ink-2);font-size:15px}
+.scard .seen{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
+.scard .seen a{color:var(--accent);text-underline-offset:3px}
+.scard.wide{grid-column:1 / -1}
+@media (max-width:820px){.svc{grid-template-columns:1fr}}
+.pitem .q{font:400 italic 21px/1.3 var(--serif);color:var(--ink);margin-bottom:14px;padding-left:14px;border-left:2px solid var(--gold)}
 
 /* projects */
 .plist{display:flex;flex-direction:column}
@@ -255,7 +267,8 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13px;color:
   <nav class="nav" aria-label="Main">
     <a class="logo" href="#home" aria-label="Back to top">SA</a>
     <ul class="links" id="links">
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Case studies</a></li>
       <li><a href="#solar">Model</a></li>
       <li><a href="#approach">Approach</a></li>
       <li><a href="#experience">Experience</a></li>
@@ -278,38 +291,79 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13px;color:
 <main>
   <!-- HERO -->
   <section class="hero" id="home">
-    <div class="float pill f1">Equity research × Energy</div>
+    <div class="float pill f1">Corporate finance × Commodities</div>
     <div class="float f2"><b>IBA Karachi</b>MS Strategic Operations Mgmt</div>
     <div class="float ghost f3">Dubai, UAE</div>
     <div class="float ghost f5">EN · UR · AR · FR</div>
     <div class="hero-core">
-      <span class="avail">Open to equity research, investment and energy strategy roles · Project work welcome</span>
+      <span class="avail">Open to corporate finance, commodity analysis and consulting roles · Advisory projects welcome</span>
       <h1>Sidrah <em>Azmat</em></h1>
-      <p class="lede">7+ years in equity research and investment analysis across energy, power, infrastructure and commodities, from sell-side coverage in Pakistan to GCC-listed companies today.</p>
+      <p class="lede">Valuation, project finance and commodity market analysis for energy, infrastructure and industrial sectors across the GCC. 7+ years across sell-side research, fund management and independent advisory work.</p>
       <div class="btns">
         <a class="btn primary" href="cv/Sidrah_Azmat_CV.pdf" target="_blank" rel="noopener">Download CV</a>
         <a class="btn" href="#projects">See my work</a>
         <a class="btn" href="#contact">Get in touch</a>
       </div>
     </div>
-    <div class="ticker" aria-hidden="true"><div>Sidrah Azmat · Equity research · Financial modelling · Energy &amp; commodities · Dubai ⇄ GCC · Sidrah Azmat · Equity research · Financial modelling · Energy &amp; commodities · Dubai ⇄ GCC · Sidrah Azmat · Equity research · Financial modelling · Energy &amp; commodities · Dubai ⇄ GCC · Sidrah Azmat · Equity research · Financial modelling · Energy &amp; commodities · Dubai ⇄ GCC ·&nbsp;</div></div>
+    <div class="ticker" aria-hidden="true"><div>Sidrah Azmat · Valuation · Project finance · Commodity analysis · Market studies · Due diligence · Dubai ⇄ GCC · Sidrah Azmat · Valuation · Project finance · Commodity analysis · Market studies · Due diligence · Dubai ⇄ GCC · Sidrah Azmat · Valuation · Project finance · Commodity analysis · Market studies · Due diligence · Dubai ⇄ GCC · Sidrah Azmat · Valuation · Project finance · Commodity analysis · Market studies · Due diligence · Dubai ⇄ GCC ·&nbsp;</div></div>
   </section>
 
   <!-- STATEMENT -->
   <section class="statement">
-    <div class="wrap"><p>I build the models behind <em>energy</em> and <em>capital allocation</em> decisions.</p></div>
+    <div class="wrap"><p>I build the models and market analysis behind <em>investment</em>, <em>pricing</em> and <em>capital allocation</em> decisions.</p></div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="block" id="services">
+    <div class="wrap">
+      <h2 class="title">Services</h2>
+      <p class="intro">Where I can help, with the work that shows it.</p>
+      <div class="svc">
+        <article class="scard">
+          <span class="n">01</span>
+          <h3>Valuation and transaction support</h3>
+          <p>DCF, trading comparables and precedent transactions, built into three statement models with clear valuation summaries. Re-rating and consolidation analysis for listed companies.</p>
+          <div class="seen">Seen in: <a href="#case-adnoc">ADNOC Gas</a> · <a href="#case-nmdc">NMDC Group</a> · <a href="#case-emsteel">EMSTEEL</a></div>
+        </article>
+        <article class="scard">
+          <span class="n">02</span>
+          <h3>Project finance and tariff modelling</h3>
+          <p>Integrated project finance models covering capex, drawdowns, debt sizing, tariff build up, equity IRR and coverage ratios, with sensitivities lenders and sponsors can test.</p>
+          <div class="seen">Seen in: <a href="#solar">600 MW solar IPP model</a></div>
+        </article>
+        <article class="scard">
+          <span class="n">03</span>
+          <h3>Commodity market analysis</h3>
+          <p>Supply and demand balances, inventory and pricing frameworks, cost curves and trade flows for oil, copper and steel, delivered as reports and live dashboards.</p>
+          <div class="seen">Seen in: <a href="#case-crude">Crude and Brent</a> · <a href="#case-copper">Copper</a> · <a href="#case-steel">Steel</a></div>
+        </article>
+        <article class="scard">
+          <span class="n">04</span>
+          <h3>Market studies and commercial due diligence</h3>
+          <p>Market structure, competitive landscape and demand segmentation work, plus due diligence and IPO documentation support.</p>
+          <div class="seen">Seen in: Abu Dhabi healthcare market study · UAE non-oil trade across CEPA partners · Philip Morris Pakistan segmentation · Kot Addu Power and Amreli Steels IPO due diligence</div>
+        </article>
+        <article class="scard wide">
+          <span class="n">05</span>
+          <h3>Risk, scenario and macro analysis</h3>
+          <p>Scenario and sensitivity analysis on base cases, country level investor risk combining governance, ESG and macro indicators, and macro outlooks (CPI, balance of payments, GDP) that feed investment decisions.</p>
+          <div class="seen">Seen in: <a href="#solar">Solar model stress test</a> · Higher Education Commission country risk research · Next Capital macro outlook</div>
+        </article>
+      </div>
+    </div>
   </section>
 
   <!-- PROJECTS -->
   <section class="block" id="projects">
     <div class="wrap">
-      <h2 class="title">Projects</h2>
+      <h2 class="title">Case studies</h2>
       <div class="plist">
 
         <article class="pitem">
           <div>
             <div class="n">1</div>
             <h3>600 MW solar IPP: tariff and project finance model</h3>
+            <p class="q">What tariff supports the investment case, and how much stress can the lenders take?</p>
             <div class="tags"><span class="tag">Project finance</span><span class="tag">Power</span><span class="tag live">Interactive</span></div>
             <p>A full project finance model built to support a tariff petition and the investment decision. Capex, drawdowns, O&amp;M, financing, tax and depreciation feed an integrated three statement output, a tariff build up, the debt schedule, equity IRR and coverage ratios.</p>
             <div class="go"><a class="btn primary" href="#solar">Explore the model ↓</a></div>
@@ -325,10 +379,11 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13px;color:
           </div>
         </article>
 
-        <article class="pitem">
+        <article class="pitem" id="case-crude">
           <div>
             <div class="n">2</div>
             <h3>Global crude balances and Brent framework</h3>
+            <p class="q">How much of the Brent price is fundamentals, and how much is geopolitical premium?</p>
             <div class="tags"><span class="tag">Oil</span><span class="tag">Model + report</span><span class="tag status">Published · Jul 2026</span></div>
             <p>Scenario model and live dashboard tracking balances, OECD inventory deviations, spare capacity, refining margins, Cushing stocks and chokepoint flows. An inventory implied Brent value separates fundamentals from the geopolitical premium. Published as a 28 page policy brief.</p>
             <div class="go"><a class="btn primary" href="https://crude-dashboard.pages.dev/frontend/" target="_blank" rel="noopener">Open the dashboard ↗</a><a class="btn" href="https://sidrahakhan.substack.com/p/emea-crude-oil-market-monitor-from" target="_blank" rel="noopener">Research note ↗</a></div>
@@ -339,10 +394,11 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13px;color:
           </div>
         </article>
 
-        <article class="pitem">
+        <article class="pitem" id="case-copper">
           <div>
             <div class="n">3</div>
             <h3>Strategic Markets Monitor: Copper</h3>
+            <p class="q">Where does the next tonne of copper come from, and is it enough for electrification demand?</p>
             <div class="tags"><span class="tag">Metals</span><span class="tag">Report</span><span class="tag status">Issue 02 · 35 pages</span></div>
             <p>A physical tonne framework on where the next tonne comes from. Tests mine pipelines, recycling and refining capacity against electrification demand.</p>
             <div class="go"><a class="btn primary" href="reports/copper-strategic-markets-monitor-issue-02.pdf" target="_blank" rel="noopener">Read the report (PDF) ↗</a><a class="btn" href="https://sidrahakhan.substack.com/p/strategic-markets-monitor-issue-02" target="_blank" rel="noopener">On Substack ↗</a></div>
@@ -353,10 +409,11 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13px;color:
           </div>
         </article>
 
-        <article class="pitem">
+        <article class="pitem" id="case-steel">
           <div>
             <div class="n">4</div>
             <h3>Steel market intelligence terminal</h3>
+            <p class="q">Which regions and production routes are cost competitive across steel products?</p>
             <div class="tags"><span class="tag">Steel</span><span class="tag">Python · JavaScript</span><span class="tag live">Live dashboard</span></div>
             <p>A market tool with an automated pipeline and live Google Sheets feed, comparing route economics across regions.</p>
             <div class="go"><a class="btn primary" href="https://sidrahazmat-coder.github.io/SidrahAKhan-SteelDashboard/" target="_blank" rel="noopener">Open the dashboard ↗</a></div>
@@ -367,10 +424,11 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13px;color:
           </div>
         </article>
 
-        <article class="pitem">
+        <article class="pitem" id="case-nmdc">
           <div>
             <div class="n">5</div>
             <h3>NMDC Group re-rating</h3>
+            <p class="q">Does the market price the consolidations, and what would a re-rating be worth?</p>
             <div class="tags"><span class="tag">Valuation</span><span class="tag">UAE</span></div>
             <p>Values the NMDC and NPCC and the ADNOC L&amp;S and ZMI consolidations, and models re-rating potential against peer EV/EBITDA multiples.</p>
             <div class="go"><a class="btn" href="https://www.linkedin.com/feed/update/urn:li:activity:7478806890395783168/" target="_blank" rel="noopener">Read the post ↗</a></div>
@@ -381,10 +439,11 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13px;color:
           </div>
         </article>
 
-        <article class="pitem">
+        <article class="pitem" id="case-adnoc">
           <div>
             <div class="n">6</div>
             <h3>ADNOC Gas valuation model</h3>
+            <p class="q">What is ADNOC Gas worth across three methods, and how do its margins and capital allocation compare with peers?</p>
             <div class="tags"><span class="tag">Model</span><span class="tag">UAE</span></div>
             <p>Three statement model with DCF, trading comparables and precedent transactions feeding a valuation summary and dashboard. Paired with a margin and capital allocation comparison against ADNOC Drilling and Aramco.</p>
           </div>
@@ -394,10 +453,11 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13px;color:
           </div>
         </article>
 
-        <article class="pitem">
+        <article class="pitem" id="case-emsteel">
           <div>
             <div class="n">7</div>
             <h3>EMSTEEL model and thesis</h3>
+            <p class="q">Can the UAE project pipeline and a lower carbon route support a re-rating?</p>
             <div class="tags"><span class="tag">Equity story</span><span class="tag">UAE</span></div>
             <p>Financial model and re-rating case tied to the UAE mega project pipeline and the carbon cost edge of its DRI-EAF route.</p>
           </div>
@@ -494,10 +554,10 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13px;color:
     <div class="wrap">
       <h2 class="title">Approach</h2>
       <div class="motivation">
-        <p class="big">Connecting surface value to fundamental value, with clear synthesis and no fluff.</p>
+        <p class="big">I’ve worked on both sides of an investment decision: building the case, and taking it to committee.</p>
         <div class="txt">
-          <p>I build the DCF, comparables and project finance models behind investment theses that committees can act on.</p>
-          <p>My path runs from sell-side coverage of E&amp;Ps, OMCs, refineries and IPPs in Pakistan, through managing part of an institutional equity book, to independent research on oil, metals and GCC-listed companies from Dubai.</p>
+          <p>As a sell-side analyst I built the DCF and comparables models behind recommendations to institutional clients. As a fund manager I presented ideas to an investment committee and won board approval for new positions.</p>
+          <p>Since 2025 I’ve worked independently from Dubai on oil, metals, trade and healthcare markets across the GCC. I also ran a small product business for four years, so I know what commercial decisions look like from the operator’s side.</p>
         </div>
       </div>
     </div>
@@ -507,9 +567,10 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13px;color:
     <div class="wrap">
       <h2 class="title">How I work</h2>
       <ol class="mlist">
-        <li><span>1</span>Start from the model, then write the thesis.</li>
-        <li><span>2</span>Separate what fundamentals justify from what the market is pricing.</li>
+        <li><span>1</span>Frame the question the decision depends on.</li>
+        <li><span>2</span>Build the model and test it against market data.</li>
         <li><span>3</span>Stress the base case before anyone else does.</li>
+        <li><span>4</span>Deliver a clear recommendation with the numbers behind it.</li>
       </ol>
     </div>
   </section>
@@ -642,10 +703,10 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13px;color:
     <div class="wrap">
       <h2 class="title">Skills and Interests</h2>
       <div class="igrid">
-        <div class="irow"><span class="label">Coverage</span><div class="tags"><span class="tag">IPPs</span><span class="tag">E&amp;P</span><span class="tag">Refining</span><span class="tag">OMCs</span><span class="tag">Utilities</span><span class="tag">Metals</span><span class="tag">Shipping</span><span class="tag">Pakistan</span><span class="tag">GCC</span></div></div>
+        <div class="irow"><span class="label">Sectors and markets</span><div class="tags"><span class="tag">IPPs</span><span class="tag">E&amp;P</span><span class="tag">Refining</span><span class="tag">OMCs</span><span class="tag">Utilities</span><span class="tag">Metals</span><span class="tag">Shipping</span><span class="tag">Pakistan</span><span class="tag">GCC</span></div></div>
         <div class="irow"><span class="label">Tools</span><div class="tags"><span class="tag">Excel</span><span class="tag">Bloomberg</span><span class="tag">Refinitiv</span><span class="tag">Python</span><span class="tag">R</span><span class="tag">SPSS</span><span class="tag">PowerPoint</span><span class="tag">JavaScript data viz</span></div></div>
-        <div class="irow"><span class="label">Analysis</span><p>Financial modelling and valuation (DCF, comps) · Project finance · Scenario and sensitivity analysis · Commodity analysis · Macroeconomic research · ESG and decarbonisation research</p></div>
-        <div class="irow"><span class="label">Markets and delivery</span><p>Industry and market research · Sell-side and consensus analysis · Commercial due diligence · Capital markets and ADX/SCA disclosure · Investment committee support · Investor presentations</p></div>
+        <div class="irow"><span class="label">Corporate finance</span><p>Financial modelling and valuation (DCF, comps) · Project finance · Scenario and sensitivity analysis · Commodity analysis · Macroeconomic research · ESG and decarbonisation research</p></div>
+        <div class="irow"><span class="label">Advisory and delivery</span><p>Industry and market research · Sell-side and consensus analysis · Commercial due diligence · Capital markets and ADX/SCA disclosure · Investment committee support · Investor presentations</p></div>
         <div class="irow"><span class="label">Education</span><p><strong>MS Strategic Operations Management</strong>, IBA Karachi · CGPA 3.62, highest in cohort</p><p><strong>BBA Finance &amp; HR</strong>, IBA Karachi</p></div>
         <div class="irow"><span class="label">Credentials</span><p>ESG Fundamentals for Financial Decision Making, CFI</p><p>Corporate Finance: ESG, PMI and NASBA (CPE)</p></div>
         <div class="irow"><span class="label">Publications</span><p>First author, <em>Modern Supply Chain Research and Applications</em> (Emerald), accepted</p><p>Second author, <em>International Business Review</em>, revise and resubmit</p></div>
@@ -678,7 +739,7 @@ footer{border-top:1px solid var(--line);padding-block:26px;font-size:13px;color:
     <div class="wrap contact">
       <span class="label">Contact</span>
       <h2>Let’s connect</h2>
-      <p>If you’re weighing a project, a stock or a market, let’s talk. Based in Dubai. Open to equity research, investment and energy strategy roles, and to project work.</p>
+      <p>Have a valuation, a project or a commodity market question? Let’s talk. Based in Dubai. Open to corporate finance, commodity analysis and consulting roles, and to advisory projects.</p>
       <a class="mail" id="email" href="mailto:sidrah.azmat@gmail.com">sidrah.azmat@gmail.com</a>
       <div class="row">
         <button class="btn primary" id="copyEmail" type="button">Copy email</button>
